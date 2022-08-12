@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +21,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatSidenavModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
