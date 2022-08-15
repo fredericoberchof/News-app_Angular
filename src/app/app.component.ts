@@ -8,7 +8,6 @@ import {
   ViewChild,
 } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-// import { NewsService } from './services/news.service';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +23,15 @@ export class AppComponent implements OnInit  {
   constructor(private observer: BreakpointObserver, private newsApi: NewsService) {}
 
   ngOnInit(): void {
-    this.newsApi.initArticles()
-    .subscribe((res: any) => {
-      this.articles = res.articles
+    // this.newsApi.initArticles().subscribe((res:any)=>{
+    //   console.log(res);
+    //   this.articles = res.articles;
+    // })
+    this.newsApi.initSources().subscribe((res:any)=>{
+      console.log(res);
+      this.sources = res.sources;
     })
-    this.newsApi.initSources()
-    .subscribe((res: any) => {
-      this.sources = res.sourcesinitSources
-    })
+
   }
 
   getSources() {}
